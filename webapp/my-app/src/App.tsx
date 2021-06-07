@@ -4,7 +4,7 @@ import videoFeedsDatabase from './videoFeedDatabase.json';
 import Emergency from './Containers/Emergency';
 import NonEmergency from './Containers/NonEmergency';
 import VideoFeed from './Model/VideoModel';
-
+import 'semantic-ui-css/semantic.min.css';
 
 
 
@@ -14,7 +14,6 @@ function App() {
   useEffect(() => {
     startTriggeringAPICalls();
   }, []);
-
 
   if (incidentList.length === 0) {
     return <NonEmergency />;

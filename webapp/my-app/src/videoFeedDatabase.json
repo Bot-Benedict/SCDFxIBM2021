@@ -1,0 +1,25 @@
+{
+    "videoFeed": [
+        {
+          "cameraId": 123,
+          "location": "",
+          "event": null,
+          "time": null,
+          "videoAssetPath":""
+        },
+        {
+          "cameraId": 123,
+          "location": "",
+          "event": null,
+          "time": null,
+          "videoAssetPath":""
+        },
+        {
+          "cameraId": 123,
+          "location": "",
+          "event": null,
+          "time": null,
+          "videoAssetPath":""
+        }
+      ]
+}

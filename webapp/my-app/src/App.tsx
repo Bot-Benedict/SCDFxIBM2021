@@ -1,26 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState, useEffect} from 'react';
 import './App.css';
+import videoFeedsDatabase from './videoFeedDatabase.json';
+import Emergency from './Containers/Emergency';
+import NonEmergency from './Containers/NonEmergency';
+import VideoFeed from './Model/VideoModel';
+
+
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [incidentList, setIncidentList] = useState<VideoFeed[]>([]);
+
+  useEffect(() => {
+    startTriggeringAPICalls();
+  }, []);
+
+
+  if (incidentList.length === 0) {
+    return <NonEmergency />;
+  }
+  return <Emergency videoFeeds={incidentList}/>;
+
+
+  async function startTriggeringAPICalls() {
+    incidentList.forEach((item) => {
+      // call api based on item id;
+      // get the response item
+      // if got event, append to the incidentlist
+    });
+    await sleep(10);
+    startTriggeringAPICalls();
+  }
+}
+
+function sleep(s: number) {
+  return new Promise(resolve => setTimeout(resolve, s * 1000));
 }
 
 export default App;

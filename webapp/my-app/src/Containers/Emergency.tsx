@@ -1,4 +1,6 @@
 import React from 'react';
+import { Header } from 'semantic-ui-react'
+import AppHeader from '../Components/Header';
 import VideoFeed from '../Model/VideoModel';
 
 type EmergencyProps = {
@@ -10,6 +12,8 @@ export default function Emergency(props: EmergencyProps){
         return <div>List Of Emergency</div>
     });
     return(
-        <div>{mapEmergencyList}</div>
+        <div>
+            <AppHeader />
+        </div>
     );
 }

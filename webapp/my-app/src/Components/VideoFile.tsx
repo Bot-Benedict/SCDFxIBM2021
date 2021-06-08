@@ -6,16 +6,20 @@ type VideoFileProp = {
     offset: number
 }
 
-var videoElement: any = null;
-const setVideoReference = (element: any) => {
-    videoElement = element;
-};
+
 
 export default function VideoFile(props: VideoFileProp){
 
+    var videoElement: any = null;
+    const setVideoReference = (element: any) => {
+        videoElement = element;
+    };
+
     React.useEffect(() => {
         setTimeout(() => {
-            videoElement.currentTime = props.offset;
+            if (videoElement) {
+                videoElement.currentTime = props.offset;
+            }
         }, 500);
     });
 

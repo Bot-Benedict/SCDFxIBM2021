@@ -15,7 +15,7 @@ function App() {
     startTriggeringAPICalls();
   }, []);
 
-  if (incidentList.length === 0) {
+  if (incidentList.length !== 0) {
     return <NonEmergency />;
   }
   return <Emergency videoFeeds={incidentList}/>;

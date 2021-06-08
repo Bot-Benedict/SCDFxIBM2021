@@ -24,7 +24,7 @@ export default function VideoFile(props: VideoFileProp){
     });
 
     return(
-        <video style={mainComponentStyle} autoPlay controls ref={setVideoReference}>
+        <video style={mainComponentStyle} autoPlay muted controls ref={setVideoReference}>
             <source src={props.assetPath} type="video/mp4"/>
         </video>
     );

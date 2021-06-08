@@ -11,7 +11,7 @@ export default function AppHeader(){
         <div style={mainContainerStyle}>           
             <div style={flexContainerStyle}>
                 <p style={titleFontStyle}>{title}</p>
-                <p style={locationFontStyle}>{locationName}</p>           
+                <p style={locationFontStyle}>{locationName} 📍</p>           
             </div>
             <Divider />
         </div>

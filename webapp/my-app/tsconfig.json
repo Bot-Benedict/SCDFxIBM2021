@@ -22,5 +22,8 @@
   },
   "include": [
     "src"
-  ]
+  ],
+  "rules": {
+    "import/no-webpack-loader-syntax": "off"
+  }
 }

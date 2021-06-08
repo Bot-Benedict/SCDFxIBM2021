@@ -5,7 +5,8 @@ import Emergency from './Containers/Emergency';
 import NonEmergency from './Containers/NonEmergency';
 import VideoFeed from './Model/VideoModel';
 import 'semantic-ui-css/semantic.min.css';
-
+import MapItem from './Components/MapItem';
+import 'mapbox-gl/dist/mapbox-gl.css';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
     startTriggeringAPICalls();
   }, []);
 
+  return (<MapItem/>);
   if (incidentList.length === 0) {
     return <NonEmergency />;
   }

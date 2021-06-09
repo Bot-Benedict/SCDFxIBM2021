@@ -16,7 +16,7 @@ function App() {
   }, []);
 
   if (incidentList.length !== 0) {
-    return <NonEmergency />;
+    return <NonEmergency eventDetectedHandler={(cameraId) => console.log("need to set state, append to incident list using this camera id")}/>;
   }
   return <Emergency videoFeeds={incidentList}/>;
 

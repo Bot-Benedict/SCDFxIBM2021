@@ -5,8 +5,7 @@ import Emergency from './Containers/Emergency';
 import NonEmergency from './Containers/NonEmergency';
 import VideoFeed from './Model/VideoModel';
 import 'semantic-ui-css/semantic.min.css';
-
-
+import 'mapbox-gl/dist/mapbox-gl.css';
 
 function App() {
   const [incidentList, setIncidentList] = useState<VideoFeed[]>([]);

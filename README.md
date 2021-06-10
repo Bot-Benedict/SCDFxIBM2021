@@ -3,7 +3,7 @@ SCDF X IBM Lifesavers' Innovation Challenge: Call For Code 2021
 
 (Product Logo)
 
-# (Name of Product)
+# Accidentalyzer
 #### Presented By Team Memory Leak: Benedict Low, Irvin Ting, Jordan Tan, Koh Swee Sen, Teo Kai Jie
 We are a group of third year undergraduate students in computer science from Nanyang Technological University (NTU).
 
@@ -16,13 +16,13 @@ There is a strong urgency to render help in these situations, but it could be af
 Hence, we feel that the time lag in response time must be resolved in such circumstances in order to save lives or prevent further damage to infrastructure.
 
 ## Our Solution
-In order to speed up emergency response in situations where passers-by may not be around the vicinity when the incidents occur, we developed the (product name) platform. The (product name) platform makes use of the cameras installed in public spaces, and use the live footages from these cameras to do video analytics. Through the live footage, we want to detect emergency situations and alert the SCDF more quickly.
+In order to speed up emergency response in situations where passers-by may not be around the vicinity when the incidents occur, we developed the Accidentalyzer platform. The Accidentalyzer platform makes use of the cameras installed in public spaces, and use the live footages from these cameras to do video analytics. Through the live footage, we want to detect emergency situations and alert the SCDF more quickly.
 
 ## Pitch Video
 Our [pitch video]() to explain the product.
 
 ## Architecture of Solution
-We have designed (product name) with the following architecture.
+We have designed Accidentalyzer with the following architecture.
 
 ## Additional Details of Solution
 Our detailed solution to the problem can be accessed from [here](https://docs.google.com/document/d/12fKjA-bDnPPvvqrT0bRfAYwgy-JynCU1R4z0ZPEEsbg/edit).

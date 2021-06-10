@@ -34,7 +34,7 @@ Our detailed solution to the problem can be accessed from [here](https://docs.go
 The following is the step-by-step guide in launching and using the prototype.
 
 ## Solution Prototype
-Our prototype has been hosted in this [link]().
+Our prototype has been hosted [here]().
 
 ## Technical Stack
 We have used the following tools in our technical stack to develop this prototype.

@@ -37,6 +37,6 @@ Our prototype has been hosted [here]().
 
 ## Technical Stack
 We have used the following tools in our technical stack to develop this prototype.
-* Reach Native
+* React
 * Tensorflow
 * Python Flask

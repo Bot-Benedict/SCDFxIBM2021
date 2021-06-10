@@ -1,8 +1,7 @@
 import flask
-from flask import request, jsonify, Flask, render_template, request
+from flask import request, jsonify
 
 app = flask.Flask(__name__)
-app.config['UPLOAD_FOLDER'] = './'
 app.config["DEBUG"] = False
 
 
@@ -19,12 +18,5 @@ def api_id():
         "cameraId": cameraid,
         "eventType": url,
     }
-
-@app.route('/uploader', methods = ['GET', 'POST'])
-def upload_file():
-   if request.method == 'POST':
-      f = request.files['file']
-      f.save(f.filename)
-      return 'file uploaded successfully'
 
 app.run()

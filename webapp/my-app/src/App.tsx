@@ -6,9 +6,16 @@ import NonEmergency from './Containers/NonEmergency';
 import VideoFeed from './Model/VideoModel';
 import 'semantic-ui-css/semantic.min.css';
 import 'mapbox-gl/dist/mapbox-gl.css';
+import StatisticDisplay from './Components/StatisticsDisplay';
+import Header from "./Components/Header";
 
 function App() {
-  const [incidentList, setIncidentList] = useState<VideoFeed[]>([]);
+  const [incidentList, setIncidentList] = useState<VideoFeed[]>(videoFeedsDatabase.videoFeed);
+
+  const removeEmergencyItemHandler = async(cameraid:number) =>{
+    setIncidentList(incidentList.slice().filter((item)=>item.cameraId!==cameraid));
+    return;
+  }
 
   useEffect(() => {
     startTriggeringAPICalls();
@@ -16,7 +23,13 @@ function App() {
   if (incidentList.length === 0) {
     return <NonEmergency />;
   }
-  return <Emergency videoFeeds={incidentList}/>;
+  return (
+    <div style={{backgroundColor:"red"}}>
+      <Header/>
+      <StatisticDisplay/>
+      <Emergency videoFeeds={incidentList} removeEmergencyItemHandler = {removeEmergencyItemHandler}/>;
+    </div>
+  );
 
 
   async function startTriggeringAPICalls() {

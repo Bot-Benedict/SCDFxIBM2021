@@ -5,7 +5,9 @@ type VideoFeed = {
     time: string | null, 
     videoAssetPath: string,
     lat: number,
-    long: number 
+    long: number,
+    imageURL: string,
+    timeoffset: number
 };
 
 export default VideoFeed;

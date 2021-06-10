@@ -6,7 +6,7 @@ import videoFeedsDatabase from '../videoFeedDatabase.json';
 import StatisticsDisplay from './../Components/StatisticsDisplay';
 
 type NonEmergencyProps = {
-    eventDetectedHandler: (cameraId: number, offset: number, imageBlob: Blob, imageURL: string) => void
+    eventDetectedHandler: (cameraId: number, offset: number, imageBlob: Blob, event: string, imageURL: string) => void
 }
 
 export default function NonEmergency(props: NonEmergencyProps){
@@ -28,7 +28,7 @@ export default function NonEmergency(props: NonEmergencyProps){
     return(
         <div style={mainComponentStyle}>
             <AppHeader />
-            <StatisticsDisplay/>
+            <StatisticsDisplay numIncidents={7}/>
             {/* <MonitoringVideoFile cameraId={0} offset={10} assetPath="/public/sweesen/videos/fire.mp4" eventDetectedHandler={() => {console.log("hey");}}/> */}
             <div style={centerCameraFeedsContainerStyle}>
                 <div className="ui three column grid">

@@ -20,7 +20,7 @@ export default function VideoFile(props: VideoFileProp){
             if (videoElement) {
                 videoElement.currentTime = props.offset;
             }
-        }, 500);
+        }, 1000);
     });
 
     return(
@@ -32,8 +32,8 @@ export default function VideoFile(props: VideoFileProp){
 
 const mainComponentStyle: CSS.Properties = {
     backgroundColor: "black",
-    height: "500px",
-    width: "500px"
+    height: "300px",
+    width: "300px"
 }
 
 

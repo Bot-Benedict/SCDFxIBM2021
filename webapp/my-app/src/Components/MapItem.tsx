@@ -20,6 +20,7 @@ export default function MapItem(props:any){
             >
               
              <Marker latitude={viewport.latitude} longitude={viewport.longitude} offsetLeft={250} offsetTop={250} 
+              draggable={true} capturePointerMove={true} captureScroll={true}
              >
                 <div style={{color:"red", fontWeight:"bold"}}>Emergency Point</div>
                 <img src={Pin} style={{width:"20%",height:"20%",}} alt="pin" />

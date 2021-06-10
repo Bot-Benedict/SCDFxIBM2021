@@ -44,26 +44,25 @@ export default function MonitoringVideoFile(props: MonitoringVideoFileProp){
             console.log(`feedImage-${props.cameraId}-${currentDateTime}.jpeg`);
             const header = {"Access-Control-Allow-Origin": "*"}
             const response = await axios.post("http://localhost:5000/uploader", formData, {headers: header});
-            console.log(response);
+            console.log(response.data);
+            if (response.data === "none") {
+                // do nothing
+                console.log("it is none!!!!!!");
+            } else {
+                const event = response.data;
+                console.log(event);
+                const name = `feedImage-${props.cameraId}-${currentDateTime}.jpeg`;
+                props.eventDetectedHandler(props.cameraId, currentVideoOffset.current, frame.blob, event, `//localhost:5000/${name}`);
+                break;
+            }
 
             //image url is: http://localhost:5000/static/`feedImage-${props.cameraId}-${currentDateTime}.jpeg`
-            await sleep(10);
+            await sleep(3);
             currentVideoOffset.current = currentVideoOffset.current + 10;
         }
     }
 
     React.useEffect(() => {
-        // setTimeout(() => {
-        //     while (!hasAlreadyOffset.current) {
-        //         if (videoElement) {
-        //             // videoElement.currentTime = props.offset;
-        //             hasAlreadyOffset.current = true;
-        //             captureFrameAndUploadToAPI();
-        //         }
-        //     }
-            
-            
-        // }, 2000);
         setTimeout(() => {
             setSomeState(true);
         }, 2000)

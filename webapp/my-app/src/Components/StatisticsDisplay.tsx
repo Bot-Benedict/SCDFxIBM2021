@@ -1,12 +1,12 @@
 import React from 'react';
-export default function StatisticsDisplay(){
+export default function StatisticsDisplay(props: {numIncidents: number}){
     return(
         <div className="ui unstackable steps" style={{margin:"20px 70px 20px 70px", paddingTop:"0px", width:"90%", height:"100px"}}>
             <div className="active step">
                 <i className="chart line icon"></i>
                 <div className="content" style={{textAlign:"center", fontSize:"22px"}}>
                     <div className="title" style={{paddingBottom:"15px"}}>Emergencies This Month</div>
-                    <div className="description" style={{fontWeight:"bold"}}>7</div>
+                    <div className="description" style={{fontWeight:"bold"}}>{props.numIncidents}</div>
                 </div>
             </div>
             <div className="active step">

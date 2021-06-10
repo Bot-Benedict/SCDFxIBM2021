@@ -5,15 +5,17 @@ import VideoFeed from '../Model/VideoModel';
 import { sleep } from '../Util/utilFunctions';
 import CSS from 'csstype';
 import EmergencyListItem from './../Components/EmergencyListItem';
+import StatisticsDisplay from './../Components/StatisticsDisplay';
 
 type EmergencyProps = {
     videoFeeds: VideoFeed[]
+    numIncidents: number
 }
 interface functionProps {
     removeEmergencyItemHandler: ((cameraid: number) => void)
 }
 
-export default function Emergency(props: EmergencyProps & functionProps){
+const Emergency = function(props: EmergencyProps & functionProps){
     const mapEmergencyList = props.videoFeeds.map((emergencyItem) => {
         return <EmergencyListItem videoFeed={emergencyItem} removeEmergencyItemHandler={props.removeEmergencyItemHandler}/>
     });
@@ -35,24 +37,28 @@ export default function Emergency(props: EmergencyProps & functionProps){
 
     return(
         <div style={{...mainComponentStyle, backgroundColor: backgroundColour}}>
-            <AppHeader />
-            <VideoFile assetPath="/sweesen/videos/fire.mp4" offset={10} />
-            <VideoFile assetPath="/sweesen/videos/fire.mp4" offset={20} />
+            <AppHeader/>
+            <StatisticsDisplay numIncidents={props.numIncidents}/>
             <div style={listComponentStyle}>
                 {mapEmergencyList}
             </div>
         </div>
     );
 }
-const backgroundRed = "#ffa8a8";
+// const backgroundRed = "#ffa8a8";
+const backgroundRed = "#ff9191";
 
 const mainComponentStyle: CSS.Properties = { 
     minHeight: "100vh"
 };
 
 const listComponentStyle: CSS.Properties = {
-    margin: "50px"
+    //margin: "50px"
 }
+
+export default Emergency;
+
+
 
 
 

@@ -8,7 +8,7 @@ CNNmodel = load_model('JordanModel1')
 
 def predict(directory):
     imageToPredict=glob.glob(directory)
-    imageArray=np.array([np.array(Image.open(imageToPredict).resize((495,426)))])
+    imageArray=np.array([np.array(Image.open(imageToPredict[0]).resize((495,426)))])
     prediction=CNNmodel.predict(imageArray)
     score = tf.nn.softmax(prediction[0])
     predictedCat=['Fire','Traffic','Injury','Normal'][np.argmax(score)]

@@ -4,14 +4,18 @@ import VideoFile from '../Components/VideoFile';
 import VideoFeed from '../Model/VideoModel';
 import { sleep } from '../Util/utilFunctions';
 import CSS from 'csstype';
+import EmergencyListItem from './../Components/EmergencyListItem';
 
 type EmergencyProps = {
     videoFeeds: VideoFeed[]
 }
+interface functionProps {
+    removeEmergencyItemHandler: ((cameraid: number) => void)
+}
 
-export default function Emergency(props: EmergencyProps){
+export default function Emergency(props: EmergencyProps & functionProps){
     const mapEmergencyList = props.videoFeeds.map((emergencyItem) => {
-        return <div>List Of Emergency</div>
+        return <EmergencyListItem videoFeed={emergencyItem} removeEmergencyItemHandler={props.removeEmergencyItemHandler}/>
     });
 
     const [backgroundColour, setBackgroundColor] = React.useState(backgroundRed);

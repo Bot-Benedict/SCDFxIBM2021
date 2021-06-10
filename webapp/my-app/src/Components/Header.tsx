@@ -1,19 +1,10 @@
 import React from 'react';
-import { Divider } from 'semantic-ui-react'
-import CSS from 'csstype';
-
-
-const title = "Emergency Detection System";
-const locationName = "Tuas";
-
-export default function AppHeader(){
+import logo from './../assets/SCDF.png';
+export default function Header(){
     return(
-        <div style={mainContainerStyle}>           
-            <div style={flexContainerStyle}>
-                <p style={titleFontStyle}>{title}</p>
-                <p style={locationFontStyle}>{locationName} 📍</p>           
-            </div>
-            <Divider />
+        <div style={{display:"flex", flexDirection:"row", justifyContent:"center", paddingTop:"10px"}}>
+            <img src={logo} alt="logo" style={{width:"100px", height:"100px"}}/>
+            <h1 style={{textAlign:"center", fontSize:"40px", fontWeight:"bold"}}>EMERGENCY RESPONSE SYSTEM</h1>
         </div>
     );
 }

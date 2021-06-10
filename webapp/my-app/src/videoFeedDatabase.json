@@ -5,7 +5,7 @@
           "location": "301 Boon Lay Way, Singapore, 649846 Jurong West Singapore Singapore",
           "event": "Fire",
           "time": "11 June 2021 08:25:56",
-          "videoAssetPath":"",
+          "videoAssetPath":"sweesen/videos/fire.mp4",
           "timeoffset": 0,
           "lat": 1.3371997449799862,
           "long": 103.70782634967432
@@ -15,7 +15,7 @@
           "location": "654A Jurong West Street 61, Singapore, 641654 Jurong West Singapore Singapore",
           "event": "Damaged Buildings",
           "time": "11 June 2021 08:30:45",
-          "videoAssetPath":"",
+          "videoAssetPath":"sweesen/videos/fire.mp4",
           "timeoffset": 0,
           "lat": 1.336370,
           "long": 103.698470
@@ -25,7 +25,7 @@
           "location": "275C Jurong West Street 25, Singapore, 643275 Jurong West Singapore Singapore",
           "event": "Falling Trees",
           "time": "11 June 2021 08:35:59",
-          "videoAssetPath":"",
+          "videoAssetPath":"sweesen/videos/fire.mp4",
           "timeoffset": 0,
           "lat": 1.353224,
           "long": 103.702631

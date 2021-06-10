@@ -9,11 +9,12 @@ type MonitoringVideoFileProp = {
     assetPath: string,
     offset: number,
     cameraId: number,
-    eventDetectedHandler: (cameraId: number) => void
+    eventDetectedHandler: (cameraId: number, offset: number, imageBlob: Blob, eventType: string, imageURL: string ) => void
 }
 
 export default function MonitoringVideoFile(props: MonitoringVideoFileProp){
 
+    const currentVideoOffset: any = React.useRef(0);
     var videoElement: any = null;
     const hasAlreadyOffset: any = React.useRef(false);
     const setVideoReference = (element: any) => {
@@ -23,28 +24,39 @@ export default function MonitoringVideoFile(props: MonitoringVideoFileProp){
     };
 
     const captureFrameAndUploadToAPI = async () => {
+        await sleep(props.cameraId % 10);
+        console.log("uploading image??");
         while (true) {
+            if (!videoElement) { continue; } 
             const frame: any = captureVideoFrame(videoElement);
             const formData = new FormData();
+            const currentDateTime = Date.now().toString();
+            console.log(frame);
             formData.append(
                 "file",
                 frame.blob,
-                `feedImage-${Date.now().toString()}.jpeg`
+                `feedImage-${props.cameraId}-${currentDateTime}.jpeg`
             );
+            console.log(`feedImage-${props.cameraId}-${currentDateTime}.jpeg`);
             const header = {"Access-Control-Allow-Origin": "*"}
-            await axios.post("http://localhost:5000/uploader", formData, {headers: header});
+            //const response = await axios.post("http://localhost:5000/uploader", formData, {headers: header});
+            //console.log(response);
+
+            //image url is: http://localhost:5000/static/`feedImage-${props.cameraId}-${currentDateTime}.jpeg`
             await sleep(10);
+            currentVideoOffset.current = currentVideoOffset.current + 10;
         }
     }
 
     React.useEffect(() => {
         setTimeout(() => {
-            if (videoElement && !hasAlreadyOffset.current) {
-                videoElement.currentTime = props.offset;
-                hasAlreadyOffset.current = true;
-                captureFrameAndUploadToAPI();
-            }
-        }, 800);
+            // if (videoElement && !hasAlreadyOffset.current) {
+            //     videoElement.currentTime = props.offset;
+            //     hasAlreadyOffset.current = true;
+                
+            // }
+            captureFrameAndUploadToAPI();
+        }, 2000);
         // setTimeout(() => {
         //     props.eventDetectedHandler(props.cameraId);
         // }, 10000)

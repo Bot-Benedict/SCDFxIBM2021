@@ -22,7 +22,14 @@ function App() {
   }, []);
 
   if (incidentList.length !== 0) {
-    return <NonEmergency eventDetectedHandler={(cameraId) => console.log("need to set state, append to incident list using this camera id")}/>;
+    return <NonEmergency eventDetectedHandler={(cameraId, offset, imageBlob, imageURL) => {
+      const videoFeed = videoFeedsDatabase.videoFeed.filter((item)=>{
+          return cameraId===item.cameraId;
+      })[0];
+      
+      setIncidentList([...incidentList,videoFeed]);
+      //console.log("need to set state, append to incident list using this camera id")
+    }}/>;
   }
   return (
     <div style={{backgroundColor:"red"}}>

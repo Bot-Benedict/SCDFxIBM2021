@@ -50,12 +50,12 @@ export default function MonitoringVideoFile(props: MonitoringVideoFileProp){
 
     React.useEffect(() => {
         setTimeout(() => {
-            // if (videoElement && !hasAlreadyOffset.current) {
-            //     videoElement.currentTime = props.offset;
-            //     hasAlreadyOffset.current = true;
-                
-            // }
-            captureFrameAndUploadToAPI();
+            if (videoElement && !hasAlreadyOffset.current) {
+                videoElement.currentTime = props.offset;
+                hasAlreadyOffset.current = true;
+                captureFrameAndUploadToAPI();
+            }
+            
         }, 2000);
         // setTimeout(() => {
         //     props.eventDetectedHandler(props.cameraId);

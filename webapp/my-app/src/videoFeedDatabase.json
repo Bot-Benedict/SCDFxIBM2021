@@ -1,25 +1,25 @@
 {
     "videoFeed": [
         {
-          "cameraId": 123,
-          "location": "",
+          "cameraId": 9884,
+          "location": "Tuas Road Link",
           "event": null,
           "time": null,
-          "videoAssetPath":""
+          "videoAssetPath":"sweesen/videos/fire.mp4"
         },
         {
-          "cameraId": 123,
-          "location": "",
+          "cameraId": 3228,
+          "location": "Tuas Secondary School",
           "event": null,
           "time": null,
-          "videoAssetPath":""
+          "videoAssetPath":"sweesen/videos/fire.mp4"
         },
         {
-          "cameraId": 123,
-          "location": "",
+          "cameraId": 4274,
+          "location": "Tuas Crecent Blk 19",
           "event": null,
           "time": null,
-          "videoAssetPath":""
+          "videoAssetPath":"sweesen/videos/fire.mp4"
         }
       ]
 }

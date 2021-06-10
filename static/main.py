@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 from flask_cors import CORS, cross_origin
 app = Flask(__name__, static_url_path='/static')
 
-app.config['UPLOAD_FOLDER'] = './static'
+app.config['UPLOAD_FOLDER'] = 'C:/Users/Irvin/Documents/MENTOR/SCDFxIBM2021'
 cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
 

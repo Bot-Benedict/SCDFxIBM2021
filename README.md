@@ -1,7 +1,7 @@
 # SCDFxIBM2021
 SCDF X IBM Lifesavers' Innovation Challenge: Call For Code 2021
 
-(Product Logo)
+<img height="230" alt="image" src=https://user-images.githubusercontent.com/48685014/121552459-12164100-ca43-11eb-8a34-131bf0e19943.png> 
 
 # Accidentalyzer
 #### Presented By Team Memory Leak: Benedict Low, Irvin Ting, Jordan Tan, Koh Swee Sen, Teo Kai Jie
@@ -23,6 +23,7 @@ Our [pitch video]() to explain the product.
 
 ## Architecture of Solution
 We have designed Accidentalyzer with the following architecture.
+<img height="150" alt="image" src=https://user-images.githubusercontent.com/48685014/121551042-df1f7d80-ca41-11eb-9430-2fa774a082e6.png> 
 
 ## Additional Details of Solution
 Our detailed solution to the problem can be accessed from [here](https://docs.google.com/document/d/12fKjA-bDnPPvvqrT0bRfAYwgy-JynCU1R4z0ZPEEsbg/edit).

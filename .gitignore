@@ -1,5 +1,5 @@
 *.jpg
-!.*/sampletest/*.jpg
+!**/sampletest/*.jpg
 *.png
 normal (KJ).zip
 .ipynb_checkpoints/

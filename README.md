@@ -32,6 +32,28 @@ Our detailed solution to the problem can be accessed from [here](https://docs.go
 ## Getting Started
 The following is the step-by-step guide in launching and using the prototype.
 
+## Installation / Environment setup
+
+### Flask backend
+```
+virtualenv flask
+cd flask
+source bin/activate
+pip install flask
+
+// copy the requirements.txt and main.py into the flask directory
+
+pip install -r requirements.txt
+python -m flask run
+```
+
+### React Frontend
+```
+cd webapp/my-app
+yarn install
+yarn start
+```
+
 ## Solution Prototype
 Our prototype has been hosted [here]().
 

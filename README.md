@@ -28,8 +28,6 @@ We have designed Accidentalyzer with the following architecture.
 ## Additional Details of Solution
 Our detailed solution to the problem can be accessed from [here](https://docs.google.com/document/d/12fKjA-bDnPPvvqrT0bRfAYwgy-JynCU1R4z0ZPEEsbg/edit).
 
-## Project Roadmap
-
 -----
 ## Getting Started
 The following is the step-by-step guide in launching and using the prototype.

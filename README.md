@@ -15,6 +15,9 @@ There is a strong urgency to render help in these situations, but it could be af
 
 Hence, we feel that the time lag in response time must be resolved in such circumstances in order to save lives or prevent further damage to infrastructure.
 
+## The Post-Pandemic Future
+As the COVID-19 pandemic rages on around the world, and with new variants coming up that can potentially be more virulent, many countries continue to tackle further transmissions of the virus. In this new normal, it is not uncommon for governments globally to take drastic approaches to curb infections in certain parts of the country from time to time. Some of these approches include ringfencing infection clusters by imposing quarantine orders to the local community within the clusters, mandating testing for the local residents and even quarantine the close contacts of infected individuals. As these restrictions curb the movements of the local population, there may be a period of time when there are lesser people out in public spaces, which further highlights the importance of emergency response in times when there are lesser people who can alert the SCDF and police in an event of an emergency.
+
 ## Our Solution
 In order to speed up emergency response in situations where passers-by may not be around the vicinity when the incidents occur, we developed the Accidentalyzer platform, which is a web dashboard application. The Accidentalyzer platform makes use of the cameras installed in public spaces, and use the live footages from these cameras to do video analytics. Through the live footage, we want to use machine learning to detect emergency situations and alert the SCDF more quickly. There are 2 main parts to this platform, namely the machine learning detection and the dashboard to alert the emergency response team.
 

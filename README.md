@@ -24,7 +24,7 @@ In order to speed up emergency response in situations where passers-by may not b
 ### Machine Learning Detected Emergency
 The platform utilises a trained neural network model to predict and classify the frames captured from public cameras into 4 categories, namely fires, traffic accidents, injured persons and non-emergency situations.
 
-## Dashboard Webapp
+### Dashboard Webapp
 Next, we have a web dashboard application that can provide real time updates based on the footage from public cameras, to the emergency response personnel. In an event when the model detects an emergency, the results will be reflected through this dashboard to indicate the type of emergency, date and time of the event and as well as the footage taken from the camera which detected the situation.
 
 ## Pitch Video

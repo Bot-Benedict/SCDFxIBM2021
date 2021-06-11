@@ -35,7 +35,7 @@ We have designed Accidentalyzer with the following architecture with the fronten
 <img height="150" alt="image" src=https://user-images.githubusercontent.com/48685014/121551042-df1f7d80-ca41-11eb-9430-2fa774a082e6.png> 
 
 ## Additional Details of Solution
-Our detailed solution to the problem can be accessed from [here](https://docs.google.com/document/d/12fKjA-bDnPPvvqrT0bRfAYwgy-JynCU1R4z0ZPEEsbg/edit).
+Our detailed solution to the problem can be accessed from [here](https://docs.google.com/document/d/12fKjA-bDnPPvvqrT0bRfAYwgy-JynCU1R4z0ZPEEsbg/edit?usp=sharing).
 
 -----
 ## Getting Started

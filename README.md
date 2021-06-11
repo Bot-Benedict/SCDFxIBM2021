@@ -61,9 +61,6 @@ yarn install
 yarn start
 ```
 
-## Solution Prototype
-Our prototype has been hosted [here](https://scdfhack.us-south.cf.appdomain.cloud/).
-
 ## Technical Stack
 We have used the following tools in our technical stack to develop this prototype.
 * React
